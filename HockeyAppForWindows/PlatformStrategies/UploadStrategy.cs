@@ -22,6 +22,9 @@ namespace HockeyApp.AppLoader.PlatformStrategies
                 case AppInfoPlatforms.Android:
                     return new UploadStrategyAndroid(forApp);
                     
+                case AppInfoPlatforms.iOS:
+                    return new UploadStrategyCustom(forApp);
+                    
                 case AppInfoPlatforms.Windows:
                     return new UploadStrategyCustom(forApp);
                     

@@ -21,6 +21,7 @@ namespace HockeyApp.AppLoader.Model
             ".APK",
             ".APPX",
             ".APPXBUNDLE",
+            ".IPA",
             ".MSI",
             ".ZIP",
             ".XAP"
@@ -136,6 +137,9 @@ namespace HockeyApp.AppLoader.Model
                             break;
                         case ".APPXBUNDLE":
                             retVal = AppInfoPlatforms.WindowsPhone;
+                            break;
+                        case ".IPA":
+                            retVal = AppInfoPlatforms.iOS;
                             break;
                         case ".MSI":
                             retVal = AppInfoPlatforms.Windows;

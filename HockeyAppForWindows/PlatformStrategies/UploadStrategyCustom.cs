@@ -85,7 +85,7 @@ namespace HockeyApp.AppLoader.PlatformStrategies
             multipartContent.AddStringContents(values);
 
 
-            var fs = new FileStream(filename, FileMode.Open);
+            var fs = new FileStream(filename, FileMode.Open, FileAccess.Read);
             multipartContent.Add(new StreamContent(fs), "ipa", Path.GetFileName(filename));
 
             ProgressMessageHandler progress = new ProgressMessageHandler();
