@@ -105,14 +105,11 @@ namespace HockeyAppForWindows.Hoch
             }
 
             tCrashes.Wait();
-
             
             #if DEBUG
-                Console.ReadLine();
+				if (_args != null && string.IsNullOrWhiteSpace(_args.NoPause))
+					Console.ReadLine();
             #endif   
-            
         }
-
-        
     }
 }

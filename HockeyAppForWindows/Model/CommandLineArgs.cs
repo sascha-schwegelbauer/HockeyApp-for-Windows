@@ -80,6 +80,10 @@ namespace HockeyApp.AppLoader.Model
         [Description("Prints the usage")]
         public string Help { get; set; }
 
+        [ArgsMemberSwitch("nopause")]
+        [Description("No pause on exit in DEBUG mode")]
+        public string NoPause { get; set; }
+
         #region internal
 
 
@@ -149,6 +153,9 @@ namespace HockeyApp.AppLoader.Model
                             break;
                         case ".ZIP":
                             retVal = AppInfoPlatforms.Custom;
+                            break;
+                        case ".APPXUPLOAD":
+                            retVal = AppInfoPlatforms.WindowsPhone;
                             break;
                     }
                 }

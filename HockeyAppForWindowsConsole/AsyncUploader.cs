@@ -33,7 +33,7 @@ namespace HockeyAppForWindows.Hoch
                 }
 
                 AppInfo app = list.First();
-                app.Version = _args.Version;
+                app.Version = _args.Version ?? app.Version;
                 app.Status = !String.IsNullOrWhiteSpace(_args.Status)?(int)_args.StatusInternal: (int)app.DefaultStatusType;
                 app.Notify = !String.IsNullOrWhiteSpace(_args.Notify) ? (int)_args.NotifyTypeInternal: (int)app.DefaultNotifyType;
                 app.Notes = _args.Notes;
